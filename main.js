@@ -26,7 +26,20 @@ if(isNaN(chilometri)) {
     document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore inserisci solo numeri');
 }
 if(isNaN(età)) {
-    document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore inserisci solo numeri');
+    document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore aggiorna la pagina e inserisci solo numeri');
+}
+
+//se viene data un'età troppo alta
+if (età > 120) {
+  document.getElementById('costo').innerHTML = ('Credo tu non sia vivo');
+}
+//se viene data un'età in negativo
+if (età < 0) {
+  document.getElementById('costo').innerHTML = ('Mi dispiace ma non sei ancora nato');
+}
+//se viene dato un chilometraggio in negativo
+if (chilometri < 0) {
+  document.getElementById('costo').innerHTML = ('Non so dove tu voglia andare ma indietro non si può! inserisci una distanza al di sopra dello 0');
 }
 
 //rendo il display visibile dopo aver compilato i prompt
