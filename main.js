@@ -1,9 +1,9 @@
 var chilometri = parseInt(prompt('Per favore inserisci la cifra dei chilometri del tuo viaggio'));
 console.log(chilometri);
-var età = parseInt(prompt('Grazie! Ora dicci la tua età così calcolo la scontistica'));
+var età = parseInt(prompt('Grazie! Ora dimmi la tua età così calcolo la scontistica'));
 console.log(età);
 //calcolo del costo del Biglietto
-var biglietto =  Math.ceil(chilometri * 0.21);
+var biglietto =  Math.floor(chilometri * 0.21);
 
 //calcolo dello sconto
 if (età < 18) { // se il passeggero ha meno di 18 anni
@@ -17,7 +17,7 @@ else if (età > 65 ) { // se il passeggero ha più di 65 anni
   console.log(sconto2);
 }
 else { // se il passeggero ha un'età maggiore di 18 e minore di 65 anni
-  document.getElementById('costo').innerHTML = biglietto;
+  document.getElementById('costo').innerHTML = biglietto + '€';
   console.log(biglietto);
 }
 
@@ -31,7 +31,7 @@ if(isNaN(età)) {
 
 //se viene data un'età troppo alta
 if (età > 120) {
-  document.getElementById('costo').innerHTML = ('Credo tu non sia vivo');
+  document.getElementById('costo').innerHTML = ('Mi dispiace ma credo che tu non sia vivo');
 }
 //se viene data un'età in negativo
 if (età < 0) {
