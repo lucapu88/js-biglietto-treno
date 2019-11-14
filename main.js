@@ -23,10 +23,10 @@ else { // se il passeggero ha un'età maggiore di 18 e minore di 65 anni
 
 //se viene inserito un valore che non è un numero
 if(isNaN(chilometri)) {
-    document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore inserisci solo numeri');
+    document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore aggiorna la pagina e inserisci SOLO NUMERI');
 }
 if(isNaN(età)) {
-    document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore aggiorna la pagina e inserisci solo numeri');
+    document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore aggiorna la pagina e inserisci SOLO NUMERI');
 }
 
 //se viene data un'età troppo alta

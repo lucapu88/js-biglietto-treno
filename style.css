@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-
+  font-family: 'Yeon Sung', cursive;
 }
 
 .container {
@@ -31,6 +31,7 @@ img {
 
 #costo {
   background-color: #C69401;
+  padding: 5px;
   font-size: 30px;
 }
 
