@@ -1,9 +1,9 @@
-var chilometri = parseInt(prompt('Per favore inserisci i chilometri del tuo viaggio'));
+var chilometri = parseInt(prompt('Per favore inserisci la cifra dei chilometri del tuo viaggio'));
 console.log(chilometri);
-var età = parseInt(prompt('dicci la tua età così calcolo la scontistica'));
+var età = parseInt(prompt('Grazie! Ora dicci la tua età così calcolo la scontistica'));
 console.log(età);
 //calcolo del costo del Biglietto
-var biglietto = chilometri * 0.21;
+var biglietto =  Math.ceil(chilometri * 0.21);
 
 //calcolo dello sconto
 if (età < 18) { // se il passeggero ha meno di 18 anni
