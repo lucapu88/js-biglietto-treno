@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://cdn.shopify.com/s/files/1/0221/1146/files/platform934-homepage-announcement-banner_1600x.png?v=1558445828');
+}
+
+#costo-biglietto {
+  display: flex;
+  align-items: center;
+  background-color: #7C1328;
+  color: white;
+  width: 600px;
+  height: 233px;
+}
+
+img {
+  width: 150px;
+}
+
+#costo {
+  background-color: #C69401;
+  color: red;
+  font-size: 30px;
+}
+
+#costo-biglietto {
+  display: none;
+}
+
+#costo-biglietto.visible {
+  display: flex;
+}
