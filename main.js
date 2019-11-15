@@ -4,15 +4,18 @@ var età = parseInt(prompt('Grazie! Ora dimmi la tua età così calcolo la scont
 console.log(età);
 //calcolo del costo del Biglietto
 var biglietto =  Math.floor(chilometri * 0.21);
+//dichiaro le variabili per gli scontisti applicati
+var percentuale20 = (biglietto * 20) / 100;
+var percentuale40 = (biglietto * 40) / 100;
 
 //calcolo dello sconto
 if (età < 18) { // se il passeggero ha meno di 18 anni
-  var sconto1 = (biglietto * 20) / 100;
+  var sconto1 = biglietto - percentuale20;
   document.getElementById('costo').innerHTML = sconto1 + '€';
   console.log(sconto1);
 }
 else if (età > 65 ) { // se il passeggero ha più di 65 anni
-  var sconto2 = (biglietto * 40) / 100;
+  var sconto2 = biglietto - percentuale40;
   document.getElementById('costo').innerHTML = sconto2 + '€';
   console.log(sconto2);
 }
