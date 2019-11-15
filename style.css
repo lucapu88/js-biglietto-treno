@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
   font-family: 'Yeon Sung', cursive;
 }
@@ -20,6 +21,8 @@ body {
   display: flex;
   align-items: center;
   background-color: #7C1328;
+  border-style: double;
+  border-color: #C69401;
   color: white;
   width: 600px;
   height: 233px;

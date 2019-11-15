@@ -3,10 +3,10 @@ console.log(chilometri);
 var età = parseInt(prompt('Grazie! Ora dimmi la tua età così calcolo la scontistica'));
 console.log(età);
 //calcolo del costo del Biglietto
-var biglietto =  Math.floor(chilometri * 0.21);
+var biglietto =  Math.floor(chilometri * 0.21);// 0.21 è il costo del singolo chilometro: 1km = 0,21€
 //dichiaro le variabili per gli scontisti applicati
-var percentuale20 = (biglietto * 20) / 100;
-var percentuale40 = (biglietto * 40) / 100;
+var percentuale20 = (biglietto * 20) / 100; //se ha meno di 18 anni 20% di sconto
+var percentuale40 = (biglietto * 40) / 100; //se ha più di 65 anni 40% di sconto
 
 //calcolo dello sconto
 if (età < 18) { // se il passeggero ha meno di 18 anni
@@ -19,11 +19,12 @@ else if (età > 65 ) { // se il passeggero ha più di 65 anni
   document.getElementById('costo').innerHTML = sconto2 + '€';
   console.log(sconto2);
 }
-else { // se il passeggero ha un'età maggiore di 18 e minore di 65 anni
+else { // se il passeggero ha un'età compresa tra 18 e 65 anni
   document.getElementById('costo').innerHTML = biglietto + '€';
   console.log(biglietto);
 }
 
+//ALTRE CASISTICHE
 //se viene inserito un valore che non è un numero
 if(isNaN(chilometri)) {
     document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore aggiorna la pagina e inserisci SOLO NUMERI');
@@ -31,7 +32,6 @@ if(isNaN(chilometri)) {
 if(isNaN(età)) {
     document.getElementById('costo').innerHTML = ('Scusa, hai inserito dei caratteri. Per favore aggiorna la pagina e inserisci SOLO NUMERI');
 }
-
 //se viene data un'età troppo alta
 if (età > 120) {
   document.getElementById('costo').innerHTML = ('Mi dispiace ma credo che tu non sia vivo');
@@ -45,5 +45,6 @@ if (chilometri < 0) {
   document.getElementById('costo').innerHTML = ('Non so dove tu voglia andare ma indietro non si può! inserisci una distanza al di sopra dello 0');
 }
 
+//IN FINE
 //rendo il display visibile dopo aver compilato i prompt
 document.getElementById('costo-biglietto').setAttribute('class','visible');
